@@ -201,7 +201,7 @@ export default function Module({ params }: ModulePageProps) {
           <VideoPlayer
             videoUrl={module.videoUrl}
             onVideoComplete={handleVideoComplete}
-            disabled={progress.videoWatched}
+            disabled={false}
           />
 
           <div className="flex items-center justify-between text-sm text-gray-600">
