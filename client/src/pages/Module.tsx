@@ -191,100 +191,138 @@ export default function Module({ params }: ModulePageProps) {
           </div>
         </div>
 
-        {/* Video Section */}
-        <div className={`bg-white rounded-xl shadow-sm p-6 mb-6 ${currentSection !== 'video' && progress.videoWatched ? '' : ''}`}>
-          <h2 className="text-xl font-semibold text-steampro-dark mb-4">
-            <i className="fas fa-play-circle text-steampro-blue mr-2"></i>
-            Training Video
-          </h2>
-          
-          <VideoPlayer
-            videoUrl={module.videoUrl}
-            onVideoComplete={handleVideoComplete}
-            disabled={false}
-          />
-
-          <div className="flex items-center justify-between text-sm text-gray-600">
-            <div className="flex items-center space-x-2">
-              <i className="fas fa-info-circle text-steampro-blue"></i>
-              <span>
-                {progress.videoWatched 
-                  ? 'Video completed!' 
-                  : 'Watch the complete video to unlock the next section'
-                }
-              </span>
-            </div>
-            <span>{module.duration}</span>
-          </div>
-        </div>
-
-        {/* Reading Section */}
-        <div className={`bg-white rounded-xl shadow-sm p-6 mb-6 ${!progress.videoWatched ? 'opacity-50' : ''}`}>
-          <div className="flex items-center justify-between mb-4">
-            <h2 className={`text-xl font-semibold flex items-center ${!progress.videoWatched ? 'text-gray-400' : 'text-steampro-dark'}`}>
-              <i className={`mr-2 ${!progress.videoWatched ? 'fas fa-lock text-gray-400' : 'fas fa-book-open text-steampro-blue'}`}></i>
-              Reading Material
-            </h2>
-            {!progress.videoWatched && (
-              <span className="text-xs bg-gray-100 text-gray-500 px-3 py-1 rounded-full">Locked</span>
-            )}
-          </div>
-          
-          {progress.videoWatched ? (
-            <div>
-              <div 
-                className="prose prose-steampro max-w-none"
-                dangerouslySetInnerHTML={{ __html: module.readingMaterial }}
-              />
+        {/* Tab Navigation */}
+        <div className="bg-white rounded-xl shadow-sm mb-6">
+          <div className="border-b border-gray-200">
+            <nav className="flex space-x-8 px-6">
+              <button
+                onClick={() => setCurrentSection('video')}
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${
+                  currentSection === 'video'
+                    ? 'border-steampro-blue text-steampro-blue'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                } ${currentSection === 'video' ? '' : ''}`}
+              >
+                <i className="fas fa-play-circle mr-2"></i>
+                Video ({module.duration})
+                {progress.videoWatched && <i className="fas fa-check text-green-500 ml-2"></i>}
+              </button>
               
-              {!progress.readingCompleted && (
-                <div className="mt-6 text-center">
-                  <button
-                    onClick={handleReadingComplete}
-                    className="bg-steampro-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all"
-                  >
-                    Mark as Read & Continue to Quiz
-                  </button>
-                </div>
-              )}
+              <button
+                onClick={() => progress.videoWatched && setCurrentSection('reading')}
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${
+                  currentSection === 'reading'
+                    ? 'border-steampro-blue text-steampro-blue'
+                    : progress.videoWatched
+                    ? 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                    : 'border-transparent text-gray-300 cursor-not-allowed'
+                }`}
+                disabled={!progress.videoWatched}
+              >
+                <i className={`mr-2 ${!progress.videoWatched ? 'fas fa-lock' : 'fas fa-book-open'}`}></i>
+                Reading Material
+                {progress.readingCompleted && <i className="fas fa-check text-green-500 ml-2"></i>}
+              </button>
               
-              {progress.readingCompleted && (
-                <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+              <button
+                onClick={() => progress.readingCompleted && setCurrentSection('quiz')}
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${
+                  currentSection === 'quiz'
+                    ? 'border-steampro-blue text-steampro-blue'
+                    : progress.readingCompleted
+                    ? 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                    : 'border-transparent text-gray-300 cursor-not-allowed'
+                }`}
+                disabled={!progress.readingCompleted}
+              >
+                <i className={`mr-2 ${!progress.readingCompleted ? 'fas fa-lock' : 'fas fa-question-circle'}`}></i>
+                Quiz (2 questions)
+                {progress.quizCompleted && <i className="fas fa-check text-green-500 ml-2"></i>}
+              </button>
+            </nav>
+          </div>
+
+          {/* Tab Content */}
+          <div className="p-6">
+            {/* Video Tab */}
+            {currentSection === 'video' && (
+              <div>
+                <VideoPlayer
+                  videoUrl={module.videoUrl}
+                  onVideoComplete={handleVideoComplete}
+                  disabled={false}
+                />
+
+                <div className="flex items-center justify-between text-sm text-gray-600 mt-4">
                   <div className="flex items-center space-x-2">
-                    <i className="fas fa-check-circle text-green-600"></i>
-                    <span className="text-green-800 font-medium">Reading completed! Quiz is now available.</span>
+                    <i className="fas fa-info-circle text-steampro-blue"></i>
+                    <span>
+                      {progress.videoWatched 
+                        ? 'Video completed! You can now access the reading material.' 
+                        : 'Watch the complete video to unlock the next section'
+                      }
+                    </span>
                   </div>
                 </div>
-              )}
-            </div>
-          ) : (
-            <div className="text-gray-400">
-              <p>Complete the video to access the reading material.</p>
-            </div>
-          )}
-        </div>
+              </div>
+            )}
 
-        {/* Quiz Section */}
-        <div className={`${!progress.readingCompleted ? 'opacity-50' : ''}`}>
-          {progress.readingCompleted ? (
-            <Quiz
-              questions={module.quiz}
-              onComplete={handleQuizComplete}
-            />
-          ) : (
-            <div className="bg-white rounded-xl shadow-sm p-6">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-semibold text-gray-400 flex items-center">
-                  <i className="fas fa-lock text-gray-400 mr-2"></i>
-                  Knowledge Quiz
-                </h2>
-                <span className="text-xs bg-gray-100 text-gray-500 px-3 py-1 rounded-full">Locked</span>
+            {/* Reading Tab */}
+            {currentSection === 'reading' && (
+              <div>
+                {progress.videoWatched ? (
+                  <div>
+                    <div 
+                      className="prose prose-steampro max-w-none"
+                      dangerouslySetInnerHTML={{ __html: module.readingMaterial }}
+                    />
+                    
+                    {!progress.readingCompleted && (
+                      <div className="mt-6 text-center">
+                        <button
+                          onClick={handleReadingComplete}
+                          className="bg-steampro-blue text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all"
+                        >
+                          Mark as Read & Continue to Quiz
+                        </button>
+                      </div>
+                    )}
+                    
+                    {progress.readingCompleted && (
+                      <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                        <div className="flex items-center space-x-2">
+                          <i className="fas fa-check-circle text-green-600"></i>
+                          <span className="text-green-800 font-medium">Reading completed! Quiz is now available.</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="text-center py-12 text-gray-400">
+                    <i className="fas fa-lock text-4xl mb-4"></i>
+                    <p className="text-lg">Complete the video to access the reading material.</p>
+                  </div>
+                )}
               </div>
-              <div className="text-gray-400">
-                <p>Complete the reading to access the quiz.</p>
+            )}
+
+            {/* Quiz Tab */}
+            {currentSection === 'quiz' && (
+              <div>
+                {progress.readingCompleted ? (
+                  <Quiz
+                    questions={module.quiz}
+                    onComplete={handleQuizComplete}
+                  />
+                ) : (
+                  <div className="text-center py-12 text-gray-400">
+                    <i className="fas fa-lock text-4xl mb-4"></i>
+                    <p className="text-lg">Complete the reading material to access the quiz.</p>
+                  </div>
+                )}
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </div>
