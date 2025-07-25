@@ -18,7 +18,10 @@ export default function VideoPlayer({ videoUrl, onVideoComplete, disabled = fals
 
   const videoId = getVideoId(videoUrl);
   
-  const handleStartVideo = () => {
+  const handleStartVideo = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Starting video...', { disabled, showVideo });
     if (!disabled) {
       setShowVideo(true);
     }
@@ -61,20 +64,27 @@ export default function VideoPlayer({ videoUrl, onVideoComplete, disabled = fals
       {!showVideo ? (
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-900 to-black">
           <div className="text-center text-white">
-            <button 
+            <button
               onClick={handleStartVideo}
               disabled={disabled}
-              className={`text-6xl mb-4 transition-all transform ${
+              className={`block w-full h-full p-8 transition-all ${
                 disabled 
                   ? 'opacity-30 cursor-not-allowed' 
-                  : 'opacity-80 hover:opacity-100 hover:scale-110 cursor-pointer text-red-500'
+                  : 'hover:bg-gray-800 cursor-pointer'
               }`}
             >
-              <i className="fas fa-play-circle"></i>
+              <div className={`text-6xl mb-4 transition-all transform ${
+                disabled 
+                  ? 'text-gray-500' 
+                  : 'text-red-500 animate-pulse hover:scale-110'
+              }`}>
+                ▶
+              </div>
+              <p className="text-lg font-semibold">Training Video</p>
+              <p className="text-sm opacity-70">
+                {disabled ? 'Video already completed' : 'Click to start watching'}
+              </p>
             </button>
-            <p className="text-lg font-semibold">Training Video</p>
-            <p className="text-sm opacity-70">Click to start watching</p>
-            {disabled && <p className="text-sm text-yellow-300 mt-2">Video already completed</p>}
           </div>
         </div>
       ) : (
