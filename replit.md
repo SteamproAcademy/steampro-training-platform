@@ -32,9 +32,10 @@ Preferred communication style: Simple, everyday language.
 ## Key Components
 
 ### Authentication System
-- **Current Implementation**: Client-side authentication using hardcoded users in `client/src/data/users.ts`
-- **Storage**: User sessions stored in localStorage
-- **Users**: Predefined users with different departments (sales, ops, marketing, finance, manufacturing)
+- **Implementation**: Client-side authentication using predefined users in `client/src/data/users.ts`
+- **Storage**: User sessions stored in localStorage  
+- **Users**: Production-ready user accounts with different departments (sales, ops, marketing, finance, manufacturing)
+- **Security**: Demo credentials removed for production deployment
 
 ### Training Content Management
 - **Content Structure**: Hierarchical training modules organized by tracks (Core, Departmental, HR)
@@ -101,19 +102,27 @@ Preferred communication style: Simple, everyday language.
 - **Database**: Requires DATABASE_URL environment variable
 - **Commands**: `npm run dev` for development mode
 
-### Production Build
+### Production Deployment
 - **Frontend**: Vite builds static assets to `dist/public`
 - **Backend**: esbuild bundles server code to `dist/index.js`
 - **Commands**: `npm run build` for production build, `npm start` for production server
 
+### Render Deployment
+- **Configuration**: `render.yaml` for automated deployment
+- **Database**: Automatic PostgreSQL provisioning
+- **Build Process**: `npm install && npm run build`
+- **Start Command**: `npm start`
+- **Environment**: NODE_ENV=production, DATABASE_URL auto-configured
+
 ### Environment Configuration
 - **Database**: PostgreSQL connection via DATABASE_URL
-- **Session Storage**: Currently in-memory, scalable to PostgreSQL
+- **Session Storage**: In-memory for development, scalable to PostgreSQL
 - **Static Assets**: Served through Express in production
+- **Security**: Demo credentials removed, environment variables for sensitive data
 
-### Replit Integration
-- **Development Plugins**: @replit/vite-plugin-runtime-error-modal and cartographer
-- **Configuration**: Tailored for Replit development environment
-- **Hot Reloading**: Full support for development workflow
+### Alternative Deployment Options
+- **Docker**: Dockerfile provided for containerized deployment
+- **Manual Setup**: Step-by-step instructions in README.md
+- **GitHub Integration**: Ready for Git-based deployment workflows
 
 The application follows a monorepo structure with clear separation between client, server, and shared code. The current implementation prioritizes rapid prototyping with client-side data storage, with infrastructure in place to migrate to full database persistence when needed.

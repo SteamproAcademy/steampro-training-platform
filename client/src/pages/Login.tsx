@@ -100,13 +100,6 @@ export default function Login() {
             {isLoading ? 'Signing In...' : 'Sign In'}
           </Button>
         </form>
-
-        <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-          <p className="text-xs text-gray-600 text-center">Demo Credentials:</p>
-          <p className="text-xs text-gray-500 text-center mt-1">yuvraj.kumar@steampro.in / 12345</p>
-          <p className="text-xs text-gray-500 text-center">rahul.sharma@steampro.in / abcd1234</p>
-          <p className="text-xs text-gray-500 text-center">anita.verma@steampro.in / pass5678</p>
-        </div>
       </div>
     </div>
   );
