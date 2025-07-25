@@ -45,19 +45,10 @@ export default function VideoPlayer({ videoUrl, onVideoComplete, disabled = fals
 
   const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&modestbranding=1&rel=0&enablejsapi=1`;
 
-  if (disabled && isVideoCompleted) {
-    return (
-      <div className="relative bg-green-100 border-2 border-green-300 rounded-lg overflow-hidden aspect-video mb-4">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-green-700">
-            <i className="fas fa-check-circle text-6xl mb-4"></i>
-            <p className="text-lg font-semibold">Video Completed!</p>
-            <p className="text-sm">You can now proceed to the next section</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const handleRewatch = () => {
+    setShowVideo(false);
+    setIsVideoCompleted(false);
+  };
 
   return (
     <div className="relative bg-black rounded-lg overflow-hidden aspect-video mb-4">
@@ -66,24 +57,24 @@ export default function VideoPlayer({ videoUrl, onVideoComplete, disabled = fals
           <div className="text-center text-white">
             <button
               onClick={handleStartVideo}
-              disabled={disabled}
-              className={`block w-full h-full p-8 transition-all ${
-                disabled 
-                  ? 'opacity-30 cursor-not-allowed' 
-                  : 'hover:bg-gray-800 cursor-pointer'
-              }`}
+              className="block w-full h-full p-8 transition-all hover:bg-gray-800 cursor-pointer"
             >
               <div className={`text-6xl mb-4 transition-all transform ${
-                disabled 
-                  ? 'text-gray-500' 
+                isVideoCompleted 
+                  ? 'text-green-500' 
                   : 'text-red-500 animate-pulse hover:scale-110'
               }`}>
-                ▶
+                {isVideoCompleted ? '✓' : '▶'}
               </div>
               <p className="text-lg font-semibold">Training Video</p>
               <p className="text-sm opacity-70">
-                {disabled ? 'Video already completed' : 'Click to start watching'}
+                {isVideoCompleted ? 'Click to rewatch' : 'Click to start watching'}
               </p>
+              {isVideoCompleted && (
+                <div className="mt-2 text-xs text-green-400">
+                  ✓ Video completed!
+                </div>
+              )}
             </button>
           </div>
         </div>
@@ -102,16 +93,22 @@ export default function VideoPlayer({ videoUrl, onVideoComplete, disabled = fals
               Watch for 30 seconds to continue
             </div>
           )}
-          {!isVideoCompleted && (
-            <div className="absolute bottom-4 left-4 right-4">
+          <div className="absolute bottom-4 left-4 right-4 flex gap-2">
+            {!isVideoCompleted && (
               <button
                 onClick={handleVideoComplete}
-                className="w-full bg-steampro-blue text-white py-2 px-4 rounded-lg hover:bg-steampro-blue/90 transition-all"
+                className="flex-1 bg-steampro-blue text-white py-2 px-4 rounded-lg hover:bg-steampro-blue/90 transition-all"
               >
                 Mark as Watched & Continue
               </button>
-            </div>
-          )}
+            )}
+            <button
+              onClick={handleRewatch}
+              className="bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-all"
+            >
+              ↻ Rewatch
+            </button>
+          </div>
         </>
       )}
     </div>
