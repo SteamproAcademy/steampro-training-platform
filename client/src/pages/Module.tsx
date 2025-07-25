@@ -60,7 +60,7 @@ export default function Module({ params }: ModulePageProps) {
     } else {
       setCurrentSection('quiz'); // Show completed quiz
     }
-  }, [params.id, user, setLocation]);
+  }, [params.id, user?.department, setLocation]);
 
   const handleVideoComplete = () => {
     updateModuleProgress(params.id, { videoWatched: true });
