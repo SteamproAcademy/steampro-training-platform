@@ -31,7 +31,7 @@ export const trainingData: TrainingData = {
     {
       id: "core-1",
       title: "Welcome to SteamPRO",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://youtu.be/Q1C4k-EUrnI",
       transcript: "Welcome to SteamPRO! We're a bath-tech startup revolutionizing luxury bathing experiences...",
       readingMaterial: `
         <h3>About SteamPRO</h3>
@@ -77,7 +77,7 @@ export const trainingData: TrainingData = {
     {
       id: "core-2",
       title: "Company Values & Culture",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://youtu.be/Q1C4k-EUrnI",
       transcript: "Our company values form the foundation of everything we do...",
       readingMaterial: `
         <h3>SteamPRO Values & Culture</h3>
@@ -117,7 +117,7 @@ export const trainingData: TrainingData = {
     {
       id: "core-3",
       title: "Safety Guidelines",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://youtu.be/Q1C4k-EUrnI",
       transcript: "Safety is our top priority at SteamPRO...",
       readingMaterial: `
         <h3>Workplace Safety at SteamPRO</h3>
@@ -162,7 +162,7 @@ export const trainingData: TrainingData = {
       {
         id: "sales-1",
         title: "Sales Process & Methodology",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        videoUrl: "https://youtu.be/Q1C4k-EUrnI",
         transcript: "Our sales process is designed to understand customer needs and provide solutions...",
         readingMaterial: `
           <h3>SteamPRO Sales Process</h3>
@@ -202,7 +202,7 @@ export const trainingData: TrainingData = {
       {
         id: "sales-2",
         title: "Handling Customer Objections",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        videoUrl: "https://youtu.be/Q1C4k-EUrnI",
         transcript: "Customer objections are opportunities to provide clarity and build trust...",
         readingMaterial: `
           <h3>Objection Handling Framework</h3>
@@ -244,7 +244,7 @@ export const trainingData: TrainingData = {
       {
         id: "ops-1",
         title: "Operations Excellence",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        videoUrl: "https://youtu.be/Q1C4k-EUrnI",
         transcript: "Operations excellence drives our ability to deliver quality products consistently...",
         readingMaterial: `
           <h3>Operations Excellence Framework</h3>
@@ -286,7 +286,7 @@ export const trainingData: TrainingData = {
       {
         id: "marketing-1",
         title: "Brand Strategy & Positioning",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        videoUrl: "https://youtu.be/Q1C4k-EUrnI",
         transcript: "Our brand represents innovation, quality, and luxury in the bath industry...",
         readingMaterial: `
           <h3>SteamPRO Brand Strategy</h3>
@@ -340,7 +340,7 @@ export const trainingData: TrainingData = {
       {
         id: "finance-1",
         title: "Financial Planning & Analysis",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        videoUrl: "https://youtu.be/Q1C4k-EUrnI",
         transcript: "Financial planning drives strategic decision-making at SteamPRO...",
         readingMaterial: `
           <h3>Financial Excellence at SteamPRO</h3>
@@ -382,7 +382,7 @@ export const trainingData: TrainingData = {
       {
         id: "manufacturing-1",
         title: "Production Excellence",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        videoUrl: "https://youtu.be/Q1C4k-EUrnI",
         transcript: "Manufacturing excellence ensures quality products that meet customer expectations...",
         readingMaterial: `
           <h3>Manufacturing Excellence Standards</h3>
@@ -429,7 +429,7 @@ export const trainingData: TrainingData = {
     {
       id: "hr-1",
       title: "Code of Conduct",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://youtu.be/Q1C4k-EUrnI",
       transcript: "Our code of conduct establishes the behavioral standards expected from all employees...",
       readingMaterial: `
         <h3>SteamPRO Code of Conduct</h3>
@@ -484,7 +484,7 @@ export const trainingData: TrainingData = {
     {
       id: "hr-2",
       title: "Diversity & Inclusion",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://youtu.be/Q1C4k-EUrnI",
       transcript: "Diversity and inclusion are fundamental to our success and innovation...",
       readingMaterial: `
         <h3>Diversity & Inclusion at SteamPRO</h3>
@@ -531,7 +531,7 @@ export const trainingData: TrainingData = {
     {
       id: "hr-3",
       title: "Benefits Overview",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: "https://youtu.be/Q1C4k-EUrnI",
       transcript: "Our comprehensive benefits package supports your health, wellbeing, and financial security...",
       readingMaterial: `
         <h3>SteamPRO Employee Benefits</h3>
