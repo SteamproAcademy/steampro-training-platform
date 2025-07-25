@@ -155,6 +155,65 @@ export const trainingData: TrainingData = {
         }
       ],
       duration: "25 minutes"
+    },
+    {
+      id: "core-4",
+      title: "Mission and Vision",
+      videoUrl: "https://youtu.be/Q1C4k-EUrnI",
+      transcript: "Our mission and vision guide our path forward as we transform the bath industry...",
+      readingMaterial: `
+        <h3>SteamPRO Mission and Vision</h3>
+        <p>Our mission and vision statements define who we are and where we're going as a company.</p>
+        
+        <h4>Our Mission</h4>
+        <p><strong>"To transform every bathroom into a personal wellness sanctuary, combining cutting-edge technology with timeless design principles."</strong></p>
+        <p>This mission drives every product we develop, every service we provide, and every interaction we have with customers. We believe that the bathroom should be more than just a functional space – it should be a place of relaxation, rejuvenation, and personal care.</p>
+        
+        <h4>Our Vision</h4>
+        <p><strong>"To be the global leader in innovative bath technology, setting new standards for luxury, sustainability, and wellness in homes worldwide."</strong></p>
+        <p>We envision a future where SteamPRO products are synonymous with excellence in bath technology. Our vision guides our long-term strategy and innovation roadmap.</p>
+        
+        <h4>How Mission and Vision Guide Our Work</h4>
+        <ul>
+          <li><strong>Product Development:</strong> Every new product must align with our mission to create wellness sanctuaries</li>
+          <li><strong>Customer Service:</strong> We approach every customer interaction with the goal of transforming their bathing experience</li>
+          <li><strong>Innovation:</strong> Our vision pushes us to develop cutting-edge solutions that set industry standards</li>
+          <li><strong>Sustainability:</strong> Both our mission and vision emphasize responsible practices for the future</li>
+        </ul>
+        
+        <h4>Living Our Mission Daily</h4>
+        <p>As a SteamPRO team member, you play a crucial role in bringing our mission and vision to life. Every decision you make should contribute to transforming bathrooms into wellness sanctuaries and establishing SteamPRO as the global leader in bath technology.</p>
+      `,
+      quiz: [
+        {
+          question: "What is SteamPRO's mission?",
+          choices: [
+            "To sell premium bathroom fixtures",
+            "To transform bathrooms into wellness sanctuaries",
+            "To compete with international brands"
+          ],
+          correctAnswer: "To transform bathrooms into wellness sanctuaries"
+        },
+        {
+          question: "According to SteamPRO's vision, what do we aim to be?",
+          choices: [
+            "A local bathroom supplier",
+            "The global leader in innovative bath technology",
+            "A traditional fixture manufacturer"
+          ],
+          correctAnswer: "The global leader in innovative bath technology"
+        },
+        {
+          question: "How should team members use the mission and vision in their work?",
+          choices: [
+            "Only reference them during meetings",
+            "Every decision should contribute to our mission and vision",
+            "They're just for marketing purposes"
+          ],
+          correctAnswer: "Every decision should contribute to our mission and vision"
+        }
+      ],
+      duration: "18 minutes"
     }
   ],
   departmental: {
