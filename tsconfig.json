@@ -2,24 +2,15 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-<<<<<<< HEAD
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-=======
     "module": "ESNext",
     "moduleResolution": "Bundler",
->>>>>>> b3d672ddfea8aedc50ba7c46f575e92a4d93adb2
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./client/src/*"],
       "@shared/*": ["./shared/*"]
     },
-<<<<<<< HEAD
     "types": ["vite/client", "node"],
-=======
-    "types": ["vite/client"],
->>>>>>> b3d672ddfea8aedc50ba7c46f575e92a4d93adb2
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -32,12 +23,8 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-<<<<<<< HEAD
     "noEmit": true,
     "resolveJsonModule": true
-=======
-    "noEmit": true
->>>>>>> b3d672ddfea8aedc50ba7c46f575e92a4d93adb2
   },
   "include": ["client/src"],
   "exclude": ["node_modules", "dist", "**/*.test.ts"]
