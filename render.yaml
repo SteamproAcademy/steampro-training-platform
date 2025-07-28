@@ -1,14 +1,15 @@
 services:
+  # Frontend - Static Site
   - type: web
     name: steampro-frontend
     env: node
     buildCommand: npm install && npm run build
-    staticPublishPath: ./dist/public
+    staticPublishPath: ./dist
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000  # Different port for frontend
+      - key: VITE_API_URL
+        value: https://steampro-backend.onrender.com
     routes:
       - type: rewrite
         source: '/*'
@@ -23,9 +24,6 @@ services:
       - key: NODE_ENV
         value: production
       - key: PORT
-        value: 3001  # Backend port
+        value: 3001
       - key: FRONTEND_URL
-        fromService:
-          name: steampro-frontend
-          type: web
-          property: url
+        value: https://steampro-frontend.onrender.com  # Direct URL instead of service reference
