@@ -31,7 +31,20 @@ export default defineConfig({
   server: {
     fs: {
       strict: true,
-      deny: ["**/.*"],
+      allow: [process.cwd()]
     },
+    port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
+    strictPort: true,
+    proxy: {
+      '/api': {
+        target: process.env.API_URL || 'http://localhost:3001',
+        changeOrigin: true,
+        secure: false
+      }
+    }
+  },
+  preview: {
+    port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
+    strictPort: true
   },
 });
