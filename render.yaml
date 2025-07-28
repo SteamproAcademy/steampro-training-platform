@@ -1,14 +1,11 @@
 services:
-  - type: web
+  - type: static_site  # Changed from 'web' to 'static_site' for frontend
     name: steampro-frontend
-    env: node
     buildCommand: npm install && npm run build
-    staticPublishPath: ./dist/public
+    outputDir: ./dist  # Changed from staticPublishPath to outputDir for static sites
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000  # Different port for frontend
     routes:
       - type: rewrite
         source: '/*'
@@ -23,9 +20,6 @@ services:
       - key: NODE_ENV
         value: production
       - key: PORT
-        value: 3001  # Backend port
+        value: 3001
       - key: FRONTEND_URL
-        fromService:
-          name: steampro-frontend
-          type: web
-          property: url
+        value: https://steampro-frontend.onrender.com  # Direct URL instead of service reference
