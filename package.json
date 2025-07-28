@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
     "build": "vite build",
-    "build:server": "esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
-    "prebuild": "rimraf dist",
+    "build:server": "tsc && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "prebuild": "npx rimraf dist",
     "start": "NODE_ENV=production node dist/index.js",
     "start:server": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview",
@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.0.0",
     "@hookform/resolvers": "^3.10.0",
     "@jridgewell/trace-mapping": "^0.3.25",
     "@neondatabase/serverless": "^0.10.4",
