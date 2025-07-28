@@ -22,7 +22,12 @@
     "listEmittedFiles": true,
     "types": ["node"]
   },
-  "include": ["server/**/*.ts"],
+  "include": [
+    "server/index.prod.ts",
+    "server/routes.ts",
+    "server/storage.ts",
+    "shared/schema.ts"
+  ],
   "exclude": [
     "node_modules",
     "dist",
