@@ -10,6 +10,7 @@
     "dev": "NODE_ENV=development tsx server/index.ts",
     "build": "vite build",
     "build:server": "tsc --project tsconfig.server.json",
+    "prebuild": "rimraf dist",
     "start": "node dist/server/server/index.prod.js",
     "start:server": "node dist/server/server/index.prod.js",
     "preview": "vite preview",
