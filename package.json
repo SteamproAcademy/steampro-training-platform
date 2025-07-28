@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
     "build": "vite build",
-    "build:server": "tsc -p tsconfig.server.json && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "build:server": "tsc -p tsconfig.server.json && esbuild server/index.ts --bundle --platform=node --format=esm --outfile=dist/index.js --packages=external --external:./node_modules/*",
+    "postbuild:server": "cp -r server/public dist/ 2>/dev/null || :",
     "prebuild": "npx rimraf dist",
     "start": "NODE_ENV=production node dist/index.js",
     "start:server": "NODE_ENV=production node dist/index.js",
