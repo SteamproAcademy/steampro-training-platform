@@ -19,7 +19,8 @@
     "resolveJsonModule": true,
     "noEmit": false,
     "declaration": false,
-    "listEmittedFiles": true
+    "listEmittedFiles": true,
+    "types": ["node"]
   },
   "include": ["server/**/*.ts"],
   "exclude": ["node_modules", "dist"]
