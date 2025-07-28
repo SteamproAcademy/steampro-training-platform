@@ -1,8 +1,9 @@
 services:
-  - type: static_site  # Changed from 'web' to 'static_site' for frontend
+  - type: web
     name: steampro-frontend
+    static: true  # Mark as a static site
     buildCommand: npm install && npm run build
-    outputDir: ./dist  # Changed from staticPublishPath to outputDir for static sites
+    staticPublishPath: ./dist  # Path to built static files
     envVars:
       - key: NODE_ENV
         value: production
