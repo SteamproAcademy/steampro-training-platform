@@ -1,7 +1,7 @@
 services:
   - type: web
     name: steampro-frontend
-    env: static  # ✅ Correct way to define a static site
+    env: static  # Correct way to define a static site
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
