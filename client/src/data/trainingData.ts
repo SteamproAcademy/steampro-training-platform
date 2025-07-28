@@ -54,26 +54,71 @@ export const trainingData: TrainingData = {
         <p>SteamPRO offers a comprehensive range of premium bath solutions including steam generators, luxury shower systems, and smart bathroom fixtures. Our products are designed and manufactured with precision in our state-of-the-art facilities.</p>
       `,
       quiz: [
-        {
-          question: "When was SteamPRO founded?",
-          choices: ["2018", "2020", "2022"],
-          correctAnswer: "2020",
-        },
-        {
-          question: "What is SteamPRO's primary mission?",
-          choices: [
-            "To sell bathroom fixtures",
-            "To transform bathrooms into wellness sanctuaries",
-            "To compete with other startups",
-          ],
-          correctAnswer: "To transform bathrooms into wellness sanctuaries",
-        },
-        {
-          question: "Which of these is NOT a SteamPRO value?",
-          choices: ["Innovation", "Speed", "Quality"],
-          correctAnswer: "Speed",
-        },
-      ],
+  {
+    question: "When was SteamPRO founded?",
+    choices: ["2018", "2020", "2022"],
+    correctAnswer: "2020",
+  },
+  {
+    question: "What is SteamPRO's primary mission?",
+    choices: [
+      "To sell bathroom fixtures",
+      "To transform bathrooms into wellness sanctuaries",
+      "To compete with other startups",
+    ],
+    correctAnswer: "To transform bathrooms into wellness sanctuaries",
+  },
+  {
+    question: "Which of these is NOT a SteamPRO value?",
+    choices: ["Innovation", "Speed", "Quality"],
+    correctAnswer: "Speed",
+  },
+  {
+    question: "What type of startup is SteamPRO?",
+    choices: [
+      "Fintech",
+      "Edtech",
+      "Bath-tech",
+    ],
+    correctAnswer: "Bath-tech",
+  },
+  {
+    question: "Which of the following best describes SteamPRO products?",
+    choices: [
+      "Mass-produced low-cost fixtures",
+      "Premium, tech-enabled bath solutions",
+      "Imported plumbing accessories",
+    ],
+    correctAnswer: "Premium, tech-enabled bath solutions",
+  },
+  {
+    question: "Where are SteamPRO’s products designed and manufactured?",
+    choices: [
+      "In overseas factories",
+      "In their state-of-the-art facilities",
+      "Through third-party vendors",
+    ],
+    correctAnswer: "In their state-of-the-art facilities",
+  },
+  {
+    question: "Which of these is a SteamPRO product?",
+    choices: [
+      "Smart TVs",
+      "Steam generators",
+      "Dishwashers",
+    ],
+    correctAnswer: "Steam generators",
+  },
+  {
+    question: "Which value emphasizes SteamPRO’s commitment to the environment?",
+    choices: [
+      "Customer Focus",
+      "Innovation",
+      "Sustainability",
+    ],
+    correctAnswer: "Sustainability",
+  }
+],
       duration: "15 minutes",
     },
     {
