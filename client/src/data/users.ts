@@ -23,5 +23,11 @@ export const users: User[] = [
     password: "pass5678",
     department: "marketing",
     name: "Anita Verma"
+  },
+  {
+    email:"pc@steampro.in",
+    password:"Pc@12345",
+    department:"sales",
+    name:"Pravir Chadha"
   }
 ];
