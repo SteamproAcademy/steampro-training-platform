@@ -47,5 +47,36 @@ export const users: User[] = [
     password:"Kishor@12345",
     department:"sales",
     name:"Kishor"
+  },
+  {
+    email:"ronak@steampro.in",
+    password:"Ronak@12345",
+    department:"sales",
+    name:"Ronak Yadav"
+  },
+  {
+    email:"sahil@steampro.in",
+    password:"Sahil@12345",
+    department:"sales",
+    name:"Sahil Singh"
+  },
+  {
+    email:"sc@steampro.in",
+    password:"Sumir@12345",
+    department:"sales",
+    name:"Sumir"
+  },
+  {
+    email:"arpit@steampro.in",
+    password:"Arpit@12345",
+    department:"sales",
+    name:"Arpit"
+  },
+  {
+    email:"krish@steampro.in",
+    password:"Arpit@12345",
+    department:"sales",
+    name:"Arpit"
   }
+  
 ];
