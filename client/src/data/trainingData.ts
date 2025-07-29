@@ -1604,7 +1604,7 @@ export const trainingData: TrainingData = {
     {
       id: "hr-1",
       title: "Hr basic training",
-      videoUrl: "https://www.youtube.com/embed/7z9wxcSu6yc",
+      videoUrl: "",
       startTime: "00:00",
       endTime: "00:18",
       transcript: "Welcome to the workplace safety training...",
