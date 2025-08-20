@@ -31,24 +31,6 @@ export const users: User[] = [
     name:"Pravir Chadha"
   },
   {
-    email: "navratan.singh@steampro.in",
-    password: "Navratan@12345",
-    department:"sales",
-    name:"Navratan Singh"
-  },
-  {
-    email: "kartik@steampro.in",
-    password:"Kartik@12345",
-    department:"sales",
-    name:"Kartik"
-  },
-  {
-    email:"kishor.das@steampro.in",
-    password:"Kishor@12345",
-    department:"sales",
-    name:"Kishor"
-  },
-  {
     email:"ronak@steampro.in",
     password:"Ronak@12345",
     department:"sales",
@@ -73,10 +55,34 @@ export const users: User[] = [
     name:"Arpit"
   },
   {
-    email:"krish@steampro.in",
-    password:"Arpit@12345",
+    email:"kapil.prabhakar@steampro.in",
+    password:"Kapil@12345",
     department:"sales",
-    name:"Arpit"
+    name:"Kapil"
+  },
+  {
+    email:"arjav.dhawan@steampro.in",
+    password:"Arjav@12345",
+    department:"sales",
+    name:"Arjav"
+  },
+  {
+    email:"debajit.karmakar@steampro.in",
+    password:"Debajit@12345",
+    department:"sales",
+    name:"Debajit"
+  },
+  {
+    email:"sunny.kashyap@steampro.in",
+    password:"Sunny@12345",
+    department:"sales",
+    name:"Sunny"
+  },
+  {
+    email:"aryan.kumar@steampro.in",
+    password:"Aryan@12345",
+    department:"sales",
+    name:"Aryan"
   }
   
 ];
