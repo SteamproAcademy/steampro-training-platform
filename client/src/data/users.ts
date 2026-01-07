@@ -121,18 +121,6 @@ export const users: User[] = [
   name: "Neha Jain"
 },
 {
-  email: "lavaanya.saini@steampro.in",
-  password: "12345",
-  department: "sales",
-  name: "Lavanya Saini"
-},
-{
-  email: "aayush.jha@steampro.in",
-  password: "12345",
-  department: "sales",
-  name: "Ayush Jha"
-},
-{
   email: "mayank.sharma@steampro.in",
   password: "12345",
   department: "sales",
@@ -155,5 +143,17 @@ export const users: User[] = [
   password: "12345",
   department: "sales",
   name: "Nyatul"
+},
+{
+  email: "lavaanya.saini@steampro.in",
+  password: "12345",
+  department: "sales",
+  name: "Lavanya Saini"
+},
+{
+  email: "aayush.jha@steampro.in",
+  password: "12345",
+  department: "sales",
+  name: "Ayush Jha"
 }
 ];
