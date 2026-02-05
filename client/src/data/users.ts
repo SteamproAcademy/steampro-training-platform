@@ -25,96 +25,180 @@ export const users: User[] = [
     name: "Anita Verma"
   },
   {
+    email: "rishab.tyagi@steampro.in",
+    password: "12345",
+    department: "sales",
+    name: "Rishab"
+  },
+  {
+    email: "shivam.Sharma@steampro.in",
+    password: "12345",
+    department: "sales",
+    name: "Shivam"
+  },
+  {
+    email: "asif.khan@steampro.in",
+    password: "12345",
+    department: "sales",
+    name: "Asif"
+  },
+  {
+    email: "qurban.ali@steampro.in",
+    password: "12345",
+    department: "sales",
+    name: "Qurban"
+  },
+  {
+  email: "neha.jain@steampro.in",
+  password: "12345",
+  department: "sales",
+  name: "Neha Jain"
+},
+{
+  email: "lavanya.saini@steampro.in",
+  password: "12345",
+  department: "sales",
+  name: "Lavanya Saini"
+},
+{
+  email: "ayush.jha@steampro.in",
+  password: "12345",
+  department: "sales",
+  name: "Ayush Jha"
+},
+{
+  email: "mayank.sharma@steampro.in",
+  password: "12345",
+  department: "sales",
+  name: "Mayank Sharma"
+},
+{
+  email: "sujal.bharti@steampro.in",
+  password: "12345",
+  department: "sales",
+  name: "Sujal Bharti"
+},
+{
+  email: "sanya.maira@steampro.in",
+  password: "12345",
+  department: "sales",
+  name: "Sanya Maira"
+},
+{
+  email: "nyatul.@steampro.in",
+  password: "12345",
+  department: "sales",
+  name: "Nyatul"
+},
+{
+    email: "yuvraj.kumar@steampro.in",
+    password: "12345",
+    department: "sales",
+    name: "Yuvraj Kumar"
+},
+{
+    email: "rahul.sharma@steampro.in",
+    password: "abcd1234",
+    department: "ops",
+    name: "Rahul Sharma"
+},
+{
+    email: "anita.verma@steampro.in",
+    password: "pass5678",
+    department: "marketing",
+    name: "Anita Verma"
+},
+{
     email:"pc@steampro.in",
     password:"Pc@12345",
     department:"sales",
     name:"Pravir Chadha"
-  },
-  {
+},
+{
     email:"ronak@steampro.in",
     password:"Ronak@12345",
     department:"sales",
     name:"Ronak Yadav"
-  },
-  {
+},
+{
     email:"sahil@steampro.in",
     password:"Sahil@12345",
     department:"sales",
     name:"Sahil Singh"
-  },
-  {
+},
+{
     email:"sc@steampro.in",
     password:"Sumir@12345",
     department:"sales",
     name:"Sumir"
-  },
-  {
+},
+{
     email:"arpit@steampro.in",
     password:"Arpit@12345",
     department:"sales",
     name:"Arpit"
-  },
-  {
+},
+{
     email:"kapil.prabhakar@steampro.in",
     password:"Kapil@12345",
     department:"sales",
     name:"Kapil"
-  },
-  {
+},
+{
     email:"arjav.dhawan@steampro.in",
     password:"Arjav@12345",
     department:"sales",
     name:"Arjav"
-  },
-  {
+},
+{
     email:"debajit.karmakar@steampro.in",
     password:"Debajit@12345",
     department:"sales",
     name:"Debajit"
-  },
-  {
+},
+{
     email:"sunny.kashyap@steampro.in",
     password:"Sunny@12345",
     department:"sales",
     name:"Sunny"
-  },
-  {
+},
+{
     email:"aryan.kumar@steampro.in",
     password:"Aryan@12345",
     department:"sales",
     name:"Aryan"
-  },
-  {
+},
+{
     email:"daizy.pruthi@steampro.in",
     password:"Daizy@12345",
     department:"sales",
     name:"Daizy Pruthi"
-  },
-  {
+},
+{
     email:"rishab.tyagi@steampro.in",
     password:"12345",
     department:"sales",
     name:"Rishab"
-  },
-  {
+},
+{
     email:"shivam.Sharma@steampro.in",
     password:"12345",
     department:"sales",
     name:"Shivam"
-  },
-  {
+},
+{
     email:"asif.khan@steampro.in",
     password:"12345",
     department:"sales",
     name:"Asif"
-  },
-  {
+},
+{
     email:"qurban.ali@steampro.in",
     password:"12345",
     department:"sales",
     name:"Qurban"
-  },
-  {
+},
+{
   email: "neha.jain@steampro.in",
   password: "12345",
   department: "sales",
@@ -139,7 +223,7 @@ export const users: User[] = [
   name: "Sanya Maira"
 },
 {
-  email: "nyatul.nake@steampro.in",
+  email: "nyatul.nyatul@steampro.in",
   password: "12345",
   department: "sales",
   name: "Nyatul"
@@ -161,5 +245,23 @@ export const users: User[] = [
   password:"12345",
   department:"sales",
   name:"Yuvraj Yadav"
+  },
+  {
+  email:"raunak.pradhan@steampro.in",
+  password:"12345",
+  department:"sales",
+  name:"Raunak Pradhan"
+  },
+  {
+  email:"vishal.panchal@steampro.in",
+  password:"12345",
+  department:"sales",
+  name:"Vishal Panchal"
+  },
+  {
+  email:"sneha.prajapati@steampro.in",
+  password:"12345",
+  department:"marketing",
+  name:"Sneha Prajapati"
   }
 ];
